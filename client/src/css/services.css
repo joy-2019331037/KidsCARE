@@ -1,0 +1,44 @@
+.mainServices{
+    margin-top: 50px;
+    margin-left: 480px;
+    /* width: 500px;
+    height: 200px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .choosePac{
+        margin-left: 200px;
+
+    }
+    .class{
+        width: 500px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        background-color: aliceblue;
+        margin-bottom: 10px;
+        border-radius: 20px;
+   
+        .pacTitle{
+            margin-left: 200px;
+            
+        }
+        .pacDetails{
+            margin-left: 70px;
+        }
+    }
+}
+
+.childInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: rgb(41, 179, 108);
+    .h5{
+       margin-left: 15px;
+       color: rgb(90, 194, 194);
+    }
+}
