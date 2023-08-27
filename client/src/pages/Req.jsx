@@ -31,9 +31,9 @@ const Req = () => {
 
   const loader = async () => {
     try {
-      const res = await axios.post("/get/baby", inputs);
+      const res = await axios.post("http://localhost:7000/api/get/baby", inputs);
       //console.log(res);
-      console.log("printing from monitor");
+      console.log("printing from req,js");
      
       if (res.data === "") {
         Swal.fire(

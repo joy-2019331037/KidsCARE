@@ -14,10 +14,14 @@ import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Write from "./pages/Write";
 import Monitor from "./pages/Monitor";
+import Blogs from './pages/Blogs';
 import Caregivers from './pages/Caregivers';
 import AdminAdmit from './pages/AdminAdmit';
 import Req from './pages/Req'
 import Services from './pages/Services';
+import Details from './pages/Details';
+import Add from './pages/AdminAdd';
+import Admitted from './pages/Admitted'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
@@ -62,6 +66,14 @@ const router = createBrowserRouter([
         element:<Home/>
       },
       {
+        path:"/blogs",
+        element:<Blogs/>
+      },
+      {
+        path:"/details/:id",
+        element:<Details/>
+      },
+      {
         path:"/services/:id",
         element:<Services/>
       },
@@ -72,6 +84,10 @@ const router = createBrowserRouter([
       {
         path:"/caregivers",
         element:<Caregivers/>
+      },
+      {
+        path:"/admitted",
+        element:<Admitted/>
       },
       {
         path:"/write",
@@ -89,6 +105,10 @@ const router = createBrowserRouter([
         path:"/req",
         element:<Req/>
       },
+      {
+        path:"/addCaregivers",
+        element:<Add/>
+      },
       
       
     ]
@@ -103,15 +123,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [loading, setLoading]=useState(false);
-  useEffect(()=>{
-    setLoading(true)
-    setTimeout(()=>{
-      setLoading(false)
-    },2000);
-
-  },[])
-
   return (
    <div>
       

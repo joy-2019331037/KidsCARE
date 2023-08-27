@@ -3,7 +3,7 @@ import db from '../db.js';
 
 const addInfo=(req,res)=>{
     const q = "insert into babies (`firstname`,`lastname`,`age`, `dob`,`nationality`,`bg`,`parentId`) values(?)";
-   
+    
     const values=[
         req.body.firstname,
         req.body.lastname,

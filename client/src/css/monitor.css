@@ -39,7 +39,7 @@
         margin-top: 40px;
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: rgb(232, 255, 237);
+        background-color: aliceblue;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -51,6 +51,12 @@
             height: 150px;
             width: 150px;
             background-color: rgb(119, 221, 221);
+        }
+        border: 1px solid white;
+        &:hover{
+            background-color: white;
+            
+            border: 1px solid gray;
         }
     }
         

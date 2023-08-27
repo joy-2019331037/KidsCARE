@@ -2,7 +2,6 @@
         margin-left: 0px;
         float: left;
         
-      
        
         .header{
            font-weight: 500;
@@ -35,7 +34,7 @@
                flex-direction: row;
                gap: 20px;
                .kidscare{
-                height: 100px;
+                height: 90px;
                 width: 100px;
                 border-radius: 50%;
                }
@@ -82,3 +81,118 @@
     }
 
     
+    .div2{
+        margin-top: 100px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: row;;
+        float: left;
+
+
+        .img{
+            width: 150px;
+            height:20px;
+        }
+
+
+        .div2title{
+            margin-left: 130px;
+            font-size: 35px;
+            color: rgb(245, 211, 74);
+            font-family: Comic Sans MS;
+        }
+
+        .hr{
+            margin-left: 50px;
+            width:650px;
+            margin-bottom: 20px;
+            border: 2px solid rgb(245, 211, 74) ;
+        }
+
+        .info{
+            margin:100px;
+            font-size: 20px;
+            font-family: Comic Sans MS;
+        }
+    }
+  
+
+    .div3{
+        margin-top: 150px;
+        margin-left: 100px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: row;;
+        float: left;
+
+
+        .img3{
+            width: 100px;
+            height:20px;
+            padding-right: 100px;
+        }
+
+
+        .div3title{
+            margin-left: 130px;
+            font-size: 35px;
+            color: rgb(245, 211, 74);
+            font-family: Comic Sans MS;
+        }
+
+        .hr{
+            margin-right: 50px;
+            width:450px;
+            margin-bottom: 20px;
+            border: 2px solid rgb(245, 211, 74) ;
+        }
+
+        .info{
+            margin-top:100px;
+            margin-right: 100px;
+            font-size: 20px;
+            font-family: Comic Sans MS;
+        }
+    }
+
+    .dabba{
+        margin-top: 100px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        .Lekha{
+            margin-left: 600px;
+            font-size: 30px;
+        }
+        .no{
+            margin-top: 20px;
+            margin-left: 500px;
+            color:blue;
+            font-size: 20px;
+        }
+
+        .mail{
+            margin-top: 20px;
+            margin-left: 550px;
+            font-size: 20px;
+            color: coral;
+        }
+
+        
+    }
+
+    .middleDiv{
+        display: flex;
+        flex-direction: row;
+        margin: 100px;
+        .middleTitle{
+            margin-left: 130px;
+            font-size: 35px;
+            color: rgb(245, 211, 74);
+            font-family: Comic Sans MS;
+        }
+        .info{
+                
+        }
+    }

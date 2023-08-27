@@ -1,0 +1,45 @@
+.Mul{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.data{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    .formm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:20px;
+        align-items:center;
+        .input{
+            width: 400px;
+            height: 20px;
+            border: none;
+            border-bottom: 1px solid gray;
+            background-color: transparent;
+        }
+        .addButton{
+            margin: 15px;
+            width:100px;
+            height:30px;
+            background-color: rgb(165, 252, 162);
+            border: 1px solid white;
+            border-radius: 20px;
+
+
+            &:hover{
+                background-color: white;
+                border: 1px solid gray;
+            }
+        }
+    }
+}

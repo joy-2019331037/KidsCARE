@@ -17,12 +17,14 @@ const Monitor=()=>{
   
     const [childStatus, setChildStatus ] =useState(false)
     const [childInfo, setChildInfo] = useState({
+        id:"",
         firstname:"",
         lastname : "",
         age:"",
         dob:"",
         nationality:"",
         bg:"",
+        parentId:"",
         guardian:currentUser.name,
     });
     
@@ -38,7 +40,7 @@ const Monitor=()=>{
         e.preventDefault();
 
         try{
-            const res = await axios.post("/get/babies", inputs);
+            const res = await axios.post("http://localhost:7000/api/get/babies", inputs);
             console.log(res);
             console.log("printing from monitor");
             if(res.data===''){
@@ -55,13 +57,15 @@ const Monitor=()=>{
                 setChildStatus(true);
                
                 setChildInfo({
+                    id:res.data.id,
                     firstname:res.data.firstname,
                     lastname:res.data.lastname,
                     age:res.data.age,
                     dob:res.data.dob,
                     nationality:res.data.nationality,
                     bg:res.data.bg,
-                    guardian:currentUser.name,
+                    parentId:res.data.parentId,
+                    guardian:currentUser.username,
                 })
             }
             
@@ -83,21 +87,23 @@ const Monitor=()=>{
             <button onClick={searchHandler}className='searchButton'>Search</button>
             </div>
         </div>
-        
+       
 
         
         {
             childStatus && (
-                <div className='infoContent'>
-                    <div className='photoDiv'>Photo Div</div>
-                    <div><b>Child Name : </b>{childInfo.firstname} {childInfo.lastname}</div>
-                    <div><b>Age : </b>{childInfo.age}</div>
-                    <div><b>Date of birth : </b>{childInfo.dob}</div>
-                    <div><b>Nationality : </b>{childInfo.nationality}</div>
-                    <div><b>Blood Group : </b>{childInfo.bg}</div>
-                    <div><b>Guardian : </b>{childInfo.guardian}</div>
+                <Link className="link" to={`/details/${childInfo.id}`}>
+                    <div className='infoContent' >
+                        <div className='photoDiv'>Photo Div</div>
+                        <div><b>Child Name : </b>{childInfo.firstname} {childInfo.lastname}</div>
+                        <div><b>Age : </b>{childInfo.age}</div>
+                        <div><b>Date of birth : </b>{childInfo.dob}</div>
+                        <div><b>Nationality : </b>{childInfo.nationality}</div>
+                        <div><b>Blood Group : </b>{childInfo.bg}</div>
+                        <div><b>Guardian : {childInfo.guardian}</b></div>
 
-                </div>
+                     </div>
+                </Link>
             )
         }
         

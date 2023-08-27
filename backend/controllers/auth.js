@@ -64,18 +64,15 @@ export const login=(req,res)=>{
         }).status(200).json(other)
 
         
-        req.session.user=data[0];
-        console.log(data[0].id);      
+        // req.session.user=data[0];
+        // console.log(data[0].id);      
     });
 }
 
 export const logout=(req,res)=>{
-    
-   
     res.clearCookie("access_token",{
         sameSite:"none",
         secure:true
 }).status(200).json("User has been logged out.")
 
-    res.redirect("/login")
 }

@@ -35,7 +35,7 @@ const Write=()=>{
         e.preventDefault();
 
         try{
-            const res = await axios.post("/add/addInfo",inputs);
+            const res = await axios.post("http://localhost:7000/api/add/addInfo",inputs);
             
             swal({
                 title: "Congrats",
@@ -44,7 +44,7 @@ const Write=()=>{
                 button: "Ok",
             })
             console.log(res);
-            navigate("/");
+            navigate("/home");
         }catch(err){
             setError(err.response.data);
             console.log(err);
